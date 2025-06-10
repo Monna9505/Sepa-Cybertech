@@ -1,0 +1,11 @@
+/*
+Theme Name: Sima Theme
+Author: Simona Stoykova
+Description: Custom theme developed by Simona Stoykova
+Text Domain: sima-theme
+Version: 1.0
+*/
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
