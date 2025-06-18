@@ -1,0 +1,85 @@
+.container {
+    max-width: 1700px;
+    padding: 0 30px;
+    margin: 0 auto;
+    @media screen and (max-width: breakpoints(lg)) {
+        padding: 0 15px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li, span {
+    font-family: $open_sans;
+    color: $black;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 55px;
+    @media screen and (max-width: breakpoints(lg)) {
+        font-size: 40px;
+        line-height: 43px;
+    }
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 45px;
+    @media screen and (max-width: breakpoints(lg)) {
+        font-size: 32px;
+        line-height: 35px;
+    }
+}
+
+h3 {
+    font-size: 35px;
+    line-height: 38px;
+    @media screen and (max-width: breakpoints(lg)) {
+        font-size: 28px;
+        line-height: 30px;
+    }
+}
+
+h4 {
+    font-size: 28px;
+    line-height: 30px;
+    @media screen and (max-width: breakpoints(lg)) {
+        font-size: 25px;
+        line-height: 28px;
+    }
+}
+
+h5 {
+    font-size: 24px;
+    line-height: 26px;
+    @media screen and (max-width: breakpoints(lg)) {
+        font-size: 22px;
+        line-height: 25px;
+    }
+}
+
+h6 {
+    font-size: 22px;
+    line-height: 24px;
+    @media screen and (max-width: breakpoints(lg)) {
+        font-size: 20px;
+        line-height: 22px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.main-button {
+    background-color: $dark_blue;
+    border-radius: 16px 16px 16px 0;
+    padding: 12px 24px;
+    @media screen and (max-width: breakpoints(lg)) {
+        border-radius: 12px 12px 12px 0;
+        padding: 7px 16px;
+    }
+}

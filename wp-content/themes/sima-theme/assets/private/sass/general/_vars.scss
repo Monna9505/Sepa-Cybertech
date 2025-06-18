@@ -1,0 +1,32 @@
+// Site colors
+$main_blue: #61b7ff;
+$dark_blue: #2e3192;
+$white: #ffffff;
+$black: #000000;
+$yellow: #eecb09;
+$main_black: #121c1e;
+$font_black: #131f23;
+
+// Fonts
+$open_sans: "Open Sans", sans-serif;
+
+@mixin smooth-transition {
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+// Responsive breakpoints
+$breakpoints:(
+    xs: 0,
+    sm: 575px,
+    md: 767px,
+    lg: 991px,
+    xl: 1199px,
+    xxl: 1400px
+);
+
+@function breakpoints($size) {
+    @return map-get($breakpoints, $size);
+}
