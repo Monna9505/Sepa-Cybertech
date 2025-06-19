@@ -1,0 +1,42 @@
+.desktop__header {
+    align-self: center;
+    flex-basis: calc(65% - 10px);
+    .links {
+        display: flex;
+        gap: 30px;
+        align-self: center;
+        .link {
+            position: relative;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $white;
+            padding: 3px 0;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 0;
+                height: 1px;
+                background-color: $dark_blue;
+                @include smooth-transition;
+            }
+            &:hover::before {
+                width: 100%;
+            }
+        }
+    }
+    .register {
+        align-self: center;
+        font-size: 13px;
+        font-weight: 700;
+        background-color: $yellow;
+        color: $dark_blue;
+        padding: 6px 30px;
+        @include smooth-transition;
+        &:hover {
+            color: $white;
+            background-color: $dark_blue;
+        }
+    }
+}

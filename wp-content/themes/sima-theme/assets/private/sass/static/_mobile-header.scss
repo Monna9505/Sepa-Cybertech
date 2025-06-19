@@ -1,0 +1,40 @@
+.mobile__header {
+    align-self: center;
+    .mobile__header__wrapper {
+        flex-basis: calc(20% - 10px);
+        .hamburger {
+            cursor: pointer;
+            position: relative;
+            right: 16px;
+            span {
+                position: absolute;
+                width: 20px;
+                height: 3px;
+                background-color: $black;
+                &:nth-child(2) {
+                    bottom: 2px;
+                }
+                &:last-child{
+                    bottom: 7px;
+                }
+            }
+        }
+        .mobile__links {
+            display: flex;
+            position: absolute;
+            left: 0;
+            top: 46px;
+            flex-direction: column;
+            width: 100%;
+            box-shadow: 0 10px 20px 0 rgba(211,211,211, 0.3);
+            padding: 20px 16px;
+            z-index: 2;
+            .link {
+                font-weight: 600;
+                text-transform: uppercase;
+                color: $dark_blue;
+                padding: 10px 0;
+            }
+        }
+    }
+}

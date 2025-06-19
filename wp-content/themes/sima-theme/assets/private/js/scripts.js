@@ -6,5 +6,5 @@
  */
 
 jQuery(function($) {
-    
+    //=include includes/header-scripts.js
 });
