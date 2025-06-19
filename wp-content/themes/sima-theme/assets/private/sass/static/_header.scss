@@ -1,0 +1,25 @@
+header {
+    background-color: $main_blue;
+    .header__wrapper {
+        border-bottom: 1px solid $white;
+        padding: 10px 0 5px 0;
+    }
+    .site__logo {
+        width: 140px;
+        height: 40px;
+        @media screen and (max-width: breakpoints(lg)) {
+            width: 90px;
+            height: 30px;
+        }
+    }
+    .desktop__header {
+        @media screen and (max-width: breakpoints(lg)) {
+            display: none;
+        }
+    }
+    .mobile__header {
+        @media screen and (min-width: breakpoints(lg)) {
+            display: none;
+        }
+    }
+}
