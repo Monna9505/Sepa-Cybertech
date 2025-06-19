@@ -10,6 +10,7 @@
 h1, h2, h3, h4, h5, h6, p, a, li, span {
     font-family: $open_sans;
     color: $black;
+    margin: 0;
 }
 
 img {
@@ -93,4 +94,9 @@ li {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
 }
