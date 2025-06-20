@@ -1,0 +1,142 @@
+.investment__slider {
+    margin-bottom: 70px;
+    @media screen and (max-width: breakpoints(lg)) {
+        margin-bottom: 50px;
+    }
+    .columns,
+    .slider .slick-track {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    .columns .slide,
+    .slider .slick-slide div .slide {
+        display: flex !important;
+        flex-direction: column;
+    }
+    .columns {
+        gap: 10px;
+        @media screen and (max-width: breakpoints(md)) {
+            flex-wrap: wrap;
+            gap: 0;
+        }
+        .slide {
+            width: calc(22% - 5px);
+            border: 2px solid $main-blue;
+            border-radius: 20px;
+            padding: 20px 10px 35px 10px;
+            @media screen and (max-width: breakpoints(lg)) {
+                padding: 10px 10px 25px 10px;
+            }
+            @media screen and (max-width: breakpoints(md)) {
+                width: calc(47% - 10px);
+                margin-bottom: 20px;
+            }
+            @media screen and (max-width: breakpoints(md)) {
+                width: 100%;
+            }
+            .slide__descr {
+                flex-grow: 1;
+            }
+            &:last-child {
+                @media screen and (max-width: breakpoints(md)) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .slider {
+        position: relative;
+        .prev_arrow,
+        .next_arrow {
+            position: absolute;
+            z-index: 1;
+            bottom: -40px;
+            cursor: pointer;
+        }
+        .prev_arrow i,
+        .next_arrow i {
+            font-size: 25px;
+            color: $dark_blue;
+        }
+        .prev_arrow {
+            right: 53%;
+            @media screen and (max-width: breakpoints(lg)) {
+                right: 50%;
+            }
+            @media screen and (max-width: breakpoints(sm)) {
+                right: 55%;
+            }
+        }
+        .next_arrow {
+            right: 50%;
+            @media screen and (max-width: breakpoints(lg)) {
+                right: 43%;
+            }
+        }
+        .slick-slide {
+            border: 2px solid $main-blue;
+            border-radius: 10px;
+            padding: 20px 10px 35px 10px;
+            margin-right: 10px;
+            &:last-child {
+                margin-right: 0;
+            }
+            @media screen and (max-width: breakpoints(lg)) {
+                padding: 10px 10px 25px 10px;
+                margin-right: 7px;
+            }
+            @media screen and (max-width: breakpoints(sm)) {
+                margin-right: 0;
+            }
+            .slide__descr {
+                flex-grow: 1;
+            }
+        }
+    }
+    .slide,
+    .slick-slide {
+        text-align: center;
+        .slide__img {
+            width: 80px;
+            text-align: center;
+            margin: 0 auto 30px auto;
+            @media screen and (max-width: breakpoints(lg)) {
+                width: 50px;
+                margin: 0 auto 15px auto;
+            }
+            img {
+                filter: invert(36%) sepia(57%) saturate(399%) hue-rotate(187deg) brightness(93%) contrast(92%);
+            }
+        }
+        .slide__title {
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            color: $dark_blue;
+            margin-bottom: 7px;
+        }
+        .slide__descr {
+            p {
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+        .slide__button {
+            text-align: center;
+            margin-top: 30px;
+            @media screen and (max-width: breakpoints(lg)) {
+                margin-top: 20px;
+            }
+            a {
+                font-weight: 700;
+                color: $white;
+                background-color: $main-blue;
+                @include smooth-transition;
+                &:hover {
+                    background-color: $dark_blue;
+                }
+            }
+        }
+    }
+}

@@ -7,4 +7,5 @@
 
 jQuery(function($) {
     //=include includes/header-scripts.js
+    //=include includes/investments-slider.js
 });
