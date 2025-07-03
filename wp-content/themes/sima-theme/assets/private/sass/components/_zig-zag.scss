@@ -1,0 +1,87 @@
+.zig_zag_component {
+    .bg_image {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        .item_wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            padding: 70px 0;
+            @media screen and (max-width: breakpoints(md)) {
+                display: block;
+                padding: 50px 0;
+            }
+            .img_wrapper,
+            .text_wrapper {
+                flex-basis: calc(50% - 20px);
+                @media screen and (max-width: breakpoints(md)) {
+                    flex-basis: 100%;
+                }
+            }
+            .img_wrapper {
+                position: relative;
+                width: 100%;
+                max-width: 400px;
+                max-height: 400px;
+                @media screen and (max-width: breakpoints(md)) {
+                    margin-bottom: 16px;
+                }
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    object-fit: cover;
+                    border-top-left-radius: 9999px;
+                    border-bottom-left-radius: 800px;
+                    border-top-right-radius: 9999px;
+                    border-bottom-right-radius: 9999px;
+                }
+                .tear__shape__dark__blue {
+                    position: absolute;
+                    top: 0;  
+                    left: 0;  
+                    width: 120px;
+                    height: 120px;
+                    background-color: $dark_blue;
+                    border-radius: 50% 50% 50% 5%;
+                    transform: rotate(-45deg);
+                    @media screen and (max-width: breakpoints(md)) {
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+            }
+             .text_wrapper {
+                .main_title {
+                    margin-bottom: 48px;
+                    @media screen and (max-width: breakpoints(md)) {
+                        margin-bottom: 16px;
+                    }
+                    h2 {
+                        color: $dark_blue;
+                    }
+                }
+            }
+        }
+        .item_wrapper.right {
+            display: flex;
+            flex-direction: row-reverse;
+              @media screen and (max-width: breakpoints(md)) {
+                display: block;
+            }    
+            .img_wrapper {
+                .tear__shape__dark__blue {
+                    top: auto;
+                    bottom: 15%;
+                    left: auto;
+                    right: 0; 
+                    background-color: $main_blue;
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+}
