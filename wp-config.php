@@ -37,6 +37,9 @@ define( 'DB_CHARSET', 'utf8mb4' );
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
 
+/** Limit post revisions */
+define( 'WP_POST_REVISIONS', 3 );
+
 /**#@+
  * Authentication unique keys and salts.
  *

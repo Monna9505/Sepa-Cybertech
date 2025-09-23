@@ -31,4 +31,13 @@ if( function_exists('acf_add_options_page') ) {
             'parent_slug'	=> 'theme-general-settings',
         )
     );
+
+    //Filter Form in Theme Settings
+    acf_add_options_sub_page(
+        array(
+            'page_title' 	=> 'Theme Filter Form',
+            'menu_title'	=> 'Filter Form Settings',
+            'parent_slug'	=> 'theme-general-settings',
+        )
+    );
 }

@@ -11,6 +11,17 @@ function sima_custom_assets_enqueue() {
     wp_enqueue_script( 'slick-scripts', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array( 'jquery' ), null, true );
     wp_enqueue_script( 'sima-font-awesome-kit', 'https://kit.fontawesome.com/c281fe38c2.js' );
     wp_enqueue_script( 'sima-theme-scripts', get_stylesheet_directory_uri() . '/assets/public/js/scripts.js', array( 'jquery' ), null, true );
+
+    // Localizing AJAX URL and nonce for all included scripts
+    wp_localize_script('sima-theme-scripts', 'investmentBondsAjax', [
+        'ajaxurl' => admin_url('admin-ajax.php'),
+        'nonce'   => wp_create_nonce('investment_bonds_filter_nonce'),
+    ]);
+
+    wp_localize_script('sima-theme-scripts', 'investformHandlerAjax', [
+        'ajaxurl' => admin_url('admin-ajax.php'),
+        'invest_nonce' => wp_create_nonce('invest_form_nonce'),
+    ]);
 }
 
 add_action( 'wp_enqueue_scripts', 'sima_custom_assets_enqueue' );

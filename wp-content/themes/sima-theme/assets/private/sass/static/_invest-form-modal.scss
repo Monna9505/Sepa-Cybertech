@@ -1,0 +1,125 @@
+.invest-modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba($black, 0.6);
+  z-index: 9999;
+  transition: all 0.3s ease-in-out;
+  &.open-invest-form {
+    display: block;
+  }
+  .investment__form__wrapper {
+    padding: 0 16px;
+    .invest-modal-content {
+      position: relative;
+      max-width: 600px;
+      background-color: $white;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba($black, 0.3);
+      margin: 50% auto;
+      padding: 20px 30px;
+      .close-modal {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 28px;
+        font-weight: bold;
+        color: #333;
+        cursor: pointer;
+        &:hover {
+          color: #e74c3c;
+        }
+      }
+      h3 {
+        font-size: 24px;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 20px;
+        @media screen and (max-width: breakpoints(lg)) {
+          font-size: 20px;
+        }
+      }
+      #invest-now-form {
+        input[type="text"],
+        input[type="email"] {
+          width: 100%;
+          font-size: 16px;
+          font-weight: 200;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-sizing: border-box;
+          padding: 10px 12px;
+          margin-bottom: 15px;
+        }
+        input:focus-visible {
+          outline: none;
+        }
+        input {
+          @media screen and (max-width: breakpoints(lg)) {
+            font-size: 14px;
+            margin-bottom: 10px;
+          }
+        }
+        .form-checkbox {
+          margin-bottom: 20px;
+          label {
+            font-family: $open-sans;
+            font-size: 16px;
+            @media screen and (max-width: breakpoints(lg)) {
+              font-size: 14px;
+            }
+            a {
+              font-size: 16px;
+              font-weight: 700;
+              color: $dark_blue;
+              @include smooth-transition;
+              &:hover {
+                color: $yellow;
+              }
+              @media screen and (max-width: breakpoints(lg)) {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        .submit__invest__form {
+          text-align: center;
+          button[type="submit"] {
+            width: 50%;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            background-color: $dark_blue;
+            border: none;
+            color: $white;
+            border-radius: 16px 16px 16px 0;
+            padding: 12px 24px;
+            @include smooth-transition;
+            &:hover {
+              background-color: $yellow;
+              color: $dark_blue;
+            }
+            @media screen and (max-width: breakpoints(lg)) {
+              width: 30%;
+              font-size: 14px;
+              padding: 10px 15px;
+            }
+          }
+        }
+      }
+      #invest-response {
+        display: none;
+        text-align: center;
+        font-size: 16px;
+        color: #27ae60;
+        margin-top: 15px;
+      }
+    }
+  }
+}
