@@ -6,7 +6,7 @@ $(document).ready(function() {
 
         if (modal.length || product.length) {
             // product.val(product);
-            modal.toggleClass('open-invest-form');
+            modal.addClass('open-invest-form');
         } else {
             console.error('Product input or modal not found!');
         }
@@ -14,7 +14,7 @@ $(document).ready(function() {
 
     // Close modal
     $('.close-modal').on('click', function() {
-        $('#invest-modal').hide();
+        $('#invest-modal').removeClass('open-invest-form');
     });
 
     // AJAX submit form

@@ -11,7 +11,7 @@ $duration_val = isset($_POST['duration_value']) ? sanitize_text_field($_POST['du
 $interest_min = isset($_POST['interest_min']) ? floatval($_POST['interest_min']) : '';
 ?>
 
-<div class="investment__bonds__products">
+<div class="investment__bonds__products" id="investment-bonds-products">
     <div class="container">
         <?php if (!empty($ibp_title)) { ?>
             <h2 class="ibp__title"><?php echo $ibp_title; ?></h2>

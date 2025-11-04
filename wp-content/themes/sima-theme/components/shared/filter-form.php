@@ -2,10 +2,10 @@
 /**
  * Filter form for financial products
  */
-$country        = isset($_POST['country']) ? sanitize_text_field($_POST['country']) : '';
-$amount_min     = isset($_POST['amount_min']) ? floatval($_POST['amount_min']) : '';
+$country        = isset($_GET['country']) ? sanitize_text_field($_GET['country']) : '';
+$amount_min     = isset($_GET['amount_min']) ? floatval($_GET['amount_min']) : '';
 $duration_table = get_field('duration_table', 'option') ?: false;
-$interest_min   = isset($_POST['interest_min']) ? floatval($_POST['interest_min']) : '';
+$interest_min   = isset($_GET['interest_min']) ? floatval($_GET['interest_min']) : '';
 
 /**
  * Getting all the countries from my 'country' taxonomy
@@ -16,7 +16,7 @@ $countries = get_terms(array(
 ));
 ?>
 
-<form method="POST" id="bonds-filter-form" class="main-grid">
+<form method="GET" id="bonds-filter-form" class="main-grid">
     <div class="countries">
         <p class="select__country"><?php echo __('Country', 'sima-theme'); ?></p>
         <select name="country">
