@@ -6,5 +6,8 @@
  */
 
 jQuery(function($) {
-    
+    //=include includes/header-scripts.js
+    //=include includes/investments-slider.js
+    //=include includes/investment-bonds-items-ajax.js
+    //=include includes/invest-form.js
 });

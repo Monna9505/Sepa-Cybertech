@@ -1,0 +1,231 @@
+.investment__bonds__products {
+    margin-bottom: 70px;
+    @media screen and (max-width: breakpoints(lg)) {
+        margin-bottom: 50px;
+    }
+    .ibp__title {
+        text-align: center;
+        color: $dark_blue;
+        margin-bottom: 15px;
+    }
+    .filter__form {
+        background-color: $main_blue;
+        padding: 20px 30px;
+        margin-bottom: 40px;
+        @media screen and (max-width: breakpoints(lg)) {
+            padding: 25px 16px;
+        }
+        #bonds-filter-form {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            @media screen and (max-width: 500px) {
+                flex-direction: column;
+                gap: 10px;
+            }
+            select,
+            input {
+                font-weight: 300;
+                height: 36px;
+                padding: 0 10px;
+                border-radius: 4px;
+                border: 1px solid $light-gray;
+            }
+            .countries,
+            .investment__amount__select,
+            .duration__wrapper,
+            .interest__rate {
+                @media screen and (max-width: breakpoints(md)) {
+                    width: calc(50% - 10px);
+                }
+                @media screen and (max-width: 500px) {
+                    width: 100%;
+                }
+                select {
+                    width: 100%;
+                }
+                input:focus-visible,
+                select:focus-visible {
+                    outline: none;
+                }
+                .select__country,
+                .duration__text__select,
+                .interest__rate__text__select,
+                label {
+                    font-family: $open_sans;
+                    font-size: 15px;
+                    font-weight: 300;
+                    color: $black;
+                    margin-bottom: 5px;
+                }
+                .duration {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    gap: 10px;
+                    input,
+                    select {
+                        width: calc(50% - 10px);
+                    }
+                }
+            }
+            .investment__amount__select {
+                display: flex;
+                flex-direction: column;
+            }
+            .filter__products {
+                align-content: end;
+                @media screen and (max-width: breakpoints(md)) {
+                    text-align: center;
+                }
+                button {
+                    cursor: pointer;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: $white;
+                    text-transform: uppercase;
+                    border: none;
+                    border-radius: 50px;
+                    background-color: $dark_blue;
+                    padding: 10px 30px;
+                    @include smooth-transition;
+                    &:hover {
+                        background-color: $yellow;
+                        color: $dark_blue;
+                    }
+                    @media screen and (max-width: breakpoints(md)) {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+    #filtered-products-container {
+        .filtered-products {
+            max-width: 1100px;
+            margin: 0 auto;
+            @media screen and (max-width: breakpoints(lg)) { 
+                width: 100%;
+                overflow-x: scroll;
+                &::-webkit-scrollbar {
+                    height: 7px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background: $dark_blue;
+                    border-radius: 6px;
+                }
+                &::-webkit-scrollbar-track {
+                    background: $light-gray;
+                }
+            }
+            table {
+                width: 100%;
+                min-width: 800px; 
+                border-collapse: separate;
+                border-spacing: 0 12px;
+                margin: 0 auto;
+                thead {
+                    tr {
+                        background: transparent;
+                    }
+                    th {
+                        font-family: $open_sans;
+                        font-weight: 300;
+                        color: $font-gray;
+                        text-align: left;
+                        padding: 0 0 0 15px;
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            position: relative;
+                            align-items: center;
+                            height: 50px;
+                            font-family: $open_sans;
+                            text-align: center;
+                            border-block: 1px solid $light-gray;
+                            color: #000;
+                            padding: 20px;
+                            @media screen and (max-width: breakpoints(md)) { 
+                                padding: 10px;
+                            }
+                            &:first-child {
+                                border-left: 1px solid $light-gray;
+                                border-top-left-radius: 15px;
+                                border-bottom-left-radius: 15px;
+                            }
+                            &:last-child {
+                                border-right: 1px solid $light-gray;
+                                border-top-right-radius: 15px;
+                                border-bottom-right-radius: 15px;
+                            }
+                            &:not(:last-child)::after {
+                                content: "";
+                                position: absolute;
+                                right: 0;
+                                top: 11px;
+                                width: 1px;
+                                height: 75%;
+                                background-color: $light-gray;
+                            }
+                            &.interest_rate {
+                                p {
+                                    font-size: 35px;
+                                    font-weight: 300;
+                                    text-transform: uppercase;
+                                    color: #4873c7;
+                                    @media screen and (max-width: breakpoints(md)) { 
+                                        font-size: 25px;
+                                    }
+                                }
+                            }
+                            &.country__and__rating__list {
+                                .country {
+                                    text-transform: capitalize;
+                                }
+                            }
+                            p {
+                                font-weight: 300;
+                                text-align: center;
+                                color: $font-gray;
+                            }
+                            &.bank__img {
+                                width: 100px;
+                                height: 40px;
+                                @media screen and (max-width: breakpoints(md)) {
+                                    width: 80px;
+                                }
+                                img {
+                                    object-fit: contain;
+                                }
+                            }
+                            &.investment__income {
+                                display: flex;
+                                justify-content: space-between;
+                                .income {
+                                    font-size: 18px;
+                                    color: #4873c7;
+                                }
+                                .invest-now-btn {
+                                    cursor: pointer;
+                                    font-size: 13px;
+                                    font-weight: 600;
+                                    background-color: transparent;
+                                    border: 1px solid $main_blue;
+                                    color: $main_blue;
+                                    padding: 7px 35px;
+                                    @include smooth-transition;
+                                    &:hover {
+                                        background-color: $dark_blue;
+                                        border-color: $dark_blue;
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

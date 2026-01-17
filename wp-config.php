@@ -26,16 +26,19 @@ define( 'DB_NAME', 'sepa-cybertech' );
 define( 'DB_USER', 'root' );
 
 /** Database password */
-define( 'DB_PASSWORD', 'root' );
+define( 'DB_PASSWORD', 'mysql' );
 
 /** Database hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', '127.0.0.1' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
 
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
+
+/** Limit post revisions */
+define( 'WP_POST_REVISIONS', 3 );
 
 /**#@+
  * Authentication unique keys and salts.
@@ -71,7 +74,7 @@ define( 'NONCE_SALT',       '6;cxVFYY%n(@tfO?W,mIA7a2-XN)wy*S`05ipO_pBGUxyokeSU]
  *
  * @link https://developer.wordpress.org/advanced-administration/wordpress/wp-config/#table-prefix
  */
-$table_prefix = 'sc_';
+$table_prefix = 'wp_';
 
 /**
  * For developers: WordPress debugging mode.
